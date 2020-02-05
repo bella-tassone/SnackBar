@@ -35,7 +35,7 @@ public class VendingMachine extends JPanel
         go.setBackground(Color.YELLOW);
         go.addActionListener(this);
         JPanel buttons = new JPanel(new GridLayout(3, 1, 5, 0));
-        buttons.setBackground(Color.BLUE);
+        buttons.setBackground(Color.blue);
         buttons.add(deposit25c);
         buttons.add(deposit10c);
         buttons.add(deposit5c);
@@ -118,7 +118,7 @@ public class VendingMachine extends JPanel
         final int y0 = getHeight() / 2;
         final int yStep = 14;
 
-        g.setColor(Color.BLACK);
+        g.setColor(Color.darkGray);
         g.drawRect(x0, y0, 28, FULL_STOCK * yStep + 4);
 
         int y = y0 + 4, x = x0 + 4;
@@ -133,7 +133,7 @@ public class VendingMachine extends JPanel
             count--;
         }
 
-        g.setColor(Color.BLUE);
+        g.setColor(Color.darkGray);
         y += yStep;
         g.drawRect(x0, y - 4, 28, 18);
 

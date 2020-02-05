@@ -8,6 +8,7 @@ public class Vendor {
     private int stock;
     private int deposit;
     private int change;
+    private static double totalSales = 0;
 
     public Vendor(int p, int s) {
         price = p;
@@ -34,6 +35,7 @@ public class Vendor {
          if(stock!=0 && deposit>=price) {
              stock--;
              change = deposit - price;
+             totalSales+=(price*0.01);
              return true;
          }
          else {
@@ -47,5 +49,11 @@ public class Vendor {
         change = 0;
         deposit = 0;
         return tempChange;
+    }
+
+    public static double getTotalSales() {
+        double holder = totalSales;
+        totalSales = 0.0;
+        return holder;
     }
 }
